@@ -4,7 +4,7 @@
   "description": "A web framework for building multi-user virtual reality experiences.",
   "homepage": "",
   "main": "src/index.js",
-  "author": "Hayden Lee <haydenjameslee@gmail.com>",
+  "author": "Hyeonah Choi <judy5615@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/networked-aframe/networked-aframe/issues"
@@ -23,7 +23,7 @@
     "test:chrome": "karma start ./tests/unit/karma.conf.js --browsers Chrome",
     "watch": "watchify src/index.js -o examples/build.js -v"
   },
-  "repository": "networked-aframe/networked-aframe",
+  "repository": "hyeonah/virtual-band2",
   "dependencies": {
     "buffered-interpolation": "^0.2.5",
     "express": "^4.17.1",
