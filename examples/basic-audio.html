@@ -12,74 +12,18 @@
     <script src="https://unpkg.com/aframe-randomizer-components@^3.0.1/dist/aframe-randomizer-components.min.js"></script>
     <script src="https://unpkg.com/aframe-particle-system-component@1.0.5/dist/aframe-particle-system-component.min.js"></script>
     <script src="/js/spawn-in-circle.component.js"></script>
-
-    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
-    
-    <!-- A-Frame CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.5.0/aframe.min.js" charset="utf-8"></script>
-    <!-- Tone.js CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/0.10.0/Tone.min.js" charset="utf-8"></script>
-
-    <!-- Pull Tone.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.3.8/Tone.js" integrity="sha256-naTV/LhDwsz+OlK3sI09fOYfIIu1yy85XA8KS9skb7c="
-    crossorigin="anonymous"></script>
-    
-    <!-- Our Synth Component -->
-    <script src="synth-component.js" charset="utf-8"></script>
-
   </head>
   <body>
-
-
-    <!-- "Solid Gold" by Miami Slice is licensed under CC 4.0: http://freemusicarchive.org/music/Miami_Slice/Disco_Cuts/Solid_Gold -->
-    <!--
-    <audio id="song" style="display:none;" autoplay loop volume="0">
-		  <source src="sounds/bensound-slowmotion.mp3" type="audio/mpeg">
-			Your browser does not support the audio element.
-    </audio>
-  -->
-
-    <audio id="audio49" controls style="display:none">
-      <source src="./sounds/piano/A0.mp3" type="audio/mpeg"> Your browser does not support the audio element.
-    </audio>
-    <audio id="audio50" controls style="display:none">
-      <source src="./sounds/piano/A1.mp3" type="audio/mpeg"> Your browser does not support the audio element.
-    </audio>
-    <audio id="audio51" controls style="display:none">
-      <source src="./sounds/piano/A2.mp3" type="audio/mpeg"> Your browser does not support the audio element.
-    </audio>
-    
     <a-scene networked-scene="
       room: basic-audio;
       debug: true;
       adapter: webrtc;
       audio: true;
-    "
-    background = "color: coral"
-    >
-    <a-camera>
-      <a-cursor></a-cursor> <!-- tone.js 때문에 fuse : true 로 바꿈-->
-    </a-camera>
-
-
-      <!-- cursor -->
-     
-        <a-box position="0 3.5 -2" rotation="30 30 0" color="skyblue"
-              event-set__enter="_event: mouseenter; color: yellowgreen; scale: 3 1 1"
-              event-set__leave="_event: mouseleave; color: skyblue; scale: 1 1 1"
-              sound="src:#music; volume:1; on: click"
-              >
-          <a-animation attribute="rotation" begin="click" dur="500" fill="backwards" to="30 30 360"></a-animation>
-        </a-box>
-
-
+    ">
       <a-assets>
 
         <img id="grid" src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png" crossorigin="anonymous">
-        <!--<img id="sky" src="http://i.imgur.com/WqlqEkq.jpg" crossorigin="anonymous" />-->
-        <!--<img id="sky" src="./img/nasa.jpg" crossorigin="anonymous" />-->>
-
-        <audio id="music" scr="./sounds/menu.mp3"></audio>
+        <img id="sky" src="http://i.imgur.com/WqlqEkq.jpg" crossorigin="anonymous" />
 
         <!-- Templates -->
 
@@ -128,7 +72,7 @@
         position="0 1.6 0"
         spawn-in-circle="radius:3"
         wasd-controls look-controls
-      >
+        >
         <a-sphere class="head"
           visible="false"
           random-color
@@ -185,23 +129,5 @@
         console.log("onConnect", new Date());
       }
     </script>
-
-    <script>
-      document.addEventListener('keydown', function(e) {
-        if (e.keyCode == 49) {
-          document.getElementById('audio49').play();
-        }
-        if (e.keyCode == 50) {
-          document.getElementById('audio50').play();
-        }
-        if (e.keyCode == 51) {
-          document.getElementById('audio51').play();
-        }
-        if (e.keyCode == 52) {
-          document.getElementById('audio52').play();
-        }
-      });
-    </script>
-
   </body>
 </html>
