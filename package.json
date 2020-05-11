@@ -2,7 +2,7 @@
   "name": "virtual-band2",
   "version": "0.7.0",
   "description": "A web framework for building multi-user virtual reality experiences.",
-  "homepage": "",
+  "homepage": "http://hyeonah.github.io/virtual-band2",
   "main": "src/index.js",
   "author": "Hyeonah Choi <judy5615@gmail.com>",
   "license": "MIT",
