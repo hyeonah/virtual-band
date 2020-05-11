@@ -7,7 +7,7 @@
   "author": "Hyeonah Choi <judy5615@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/networked-aframe/networked-aframe/issues"
+    "url": "https://github.com/virtual-band2/issues"
   },
   "scripts": {
     "build": "browserify src/index.js -o examples/build.js",
