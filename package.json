@@ -1,13 +1,13 @@
 {
-  "name": "virtual-band2",
+  "name": "virtual-band",
   "version": "0.7.0",
   "description": "A web framework for building multi-user virtual reality experiences.",
-  "homepage": "http://hyeonah.github.io/virtual-band2",
+  "homepage": "http://hyeonah.github.io/virtual-band",
   "main": "src/index.js",
   "author": "Hyeonah Choi <judy5615@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/virtual-band2/issues"
+    "url": "https://github.com/virtual-band/issues"
   },
   "scripts": {
     "build": "browserify src/index.js -o examples/build.js",
@@ -23,7 +23,7 @@
     "test:chrome": "karma start ./tests/unit/karma.conf.js --browsers Chrome",
     "watch": "watchify src/index.js -o examples/build.js -v"
   },
-  "repository": "hyeonah/virtual-band2",
+  "repository": "hyeonah/virtual-band",
   "dependencies": {
     "buffered-interpolation": "^0.2.5",
     "express": "^4.17.1",
